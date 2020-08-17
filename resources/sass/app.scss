@@ -1,0 +1,215 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import "../js/dropzone/dist/dropzone.css";
+
+.z-index {
+    z-index: 1;
+}
+
+//dropzone aka file upload
+.poker-hands
+{
+    &-dropzone
+    {
+        &-container
+        {
+            border: 1px dashed $primary;
+            box-sizing: border-box;
+            border-radius: $border-radius;
+            width: 70%;
+            margin:0 auto;
+            height: 100%;
+            max-height: 595px;
+
+            overflow-x: hidden;
+            overflow-y: scroll;
+            cursor: pointer;
+
+            // dropzone css
+            .dz
+            {
+                &-started
+                {
+                    // hide upload files
+                    > .dz-message
+                    {
+                        display: none;
+                    }
+                }
+
+                .processing
+                {
+                    .delete
+                    {
+                        > svg
+                        {
+                            fill: $primary
+                        }
+                    }
+                }
+
+                &-error
+                {
+                    .dz-details
+                    {
+                        background: $red;
+
+                        .dz-filename
+                        {
+                            color: #323232;
+                            text-align: center;
+                            width: 100% !important;
+                            display: inline-block;
+                        }
+
+                        .dz-size, .progress
+                        {
+                            display: none;
+                        }
+                    }
+
+                    .delete
+                    {
+                        background: rgba($red, .2) !important;
+
+                        > svg
+                        {
+                            fill: $red
+                        }
+                    }
+
+                }
+
+                &-success
+                {
+                    .dz-details
+                    {
+                        background: $success;
+
+                        .dz-filename
+                        {
+                            color: #323232;
+                            text-align: center;
+                            width: 100% !important;
+                            display: inline-block;
+                        }
+
+                        .dz-size, .progress
+                        {
+                            display: none;
+                        }
+                    }
+
+                    .delete
+                    {
+                        display: none !important;
+                    }
+
+                    .success
+                    {
+                        display: block !important;
+                        background: $success !important;
+                    }
+                }
+
+                &-preview
+                {
+                    //height: 136px;
+                    height: 125px;
+                    width: 100%;
+                    padding: 10px;
+
+                    border-radius: $border-radius;
+                    border: 1px solid #CCC;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+
+                    margin-bottom: 15px;
+
+                    // delete btn
+                    .delete
+                    {
+                        @extend .btn;
+                        background: $blue;
+                    }
+                }
+
+                &-image
+                {
+                    width: 100%;
+                    flex: 0 1;
+                    margin-right: 10px;
+                }
+
+                &-details
+                {
+                    flex: 1;
+                    flex-direction: column;
+
+                    align-items: center;
+                    display: table-cell;
+
+                    height: 100%;
+                    max-width: 364px;
+
+                    overflow: hidden;
+
+                    background: $gray;
+                    border-radius: $border-radius;
+
+                    .progress
+                    {
+                        border-radius: 0;
+                        height: 3px;
+                        background-color: $gray;
+                    }
+                }
+
+                &-filename
+                {
+                    flex: 1;
+                    display: table-cell;
+                    align-items: center;
+
+                    height: 100%;
+
+                    border-radius: $border-radius;
+
+                    text-align: left;
+                    color: #323232;
+                    font-weight: normal;
+                    font-size: 18px;
+                }
+
+                &-progress
+                {
+                    display: none;
+                }
+
+                &-error-message
+                {
+                    display: none;
+                }
+
+                &-success-mark
+                {
+                    display: none;
+                }
+
+                &-error-mark
+                {
+                    display: none;
+                }
+            }
+        }
+    }
+}
