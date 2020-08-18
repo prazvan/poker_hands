@@ -1,6 +1,6 @@
 ## Installation Steps 
 
-*  mkdir `dirname` && git clone git@github.com:prazvan/poker_hands.git .
+*  `mkdir dirname && cd dirname && git clone git@github.com:prazvan/poker_hands.git .`
 *  composer install 
 *  composer update  - if needed
 *  npm install
@@ -84,7 +84,7 @@ development server at `http://localhost:8000`:
 
 ### Important notes when using the Build in Development Server.
 
-* in the `.env` file make sure to change the `CONNECTION_PROTOCOL` to 'http'
+* in the `.env` file make sure to change the `CONNECTION_PROTOCOL` to `http`
 since the php server does not support https. 
 
 After Changing the `.env` file, make sure you run the following
@@ -92,7 +92,6 @@ After Changing the `.env` file, make sure you run the following
 * `php artisan config:clear` 
 * `php artisan optimize:clear`
 * `php artisan optimize`
-
 
 # Done
 ![That's all Folks!](https://i.pinimg.com/originals/ae/c2/8f/aec28f0b31f6f5bbf6c6b4321eed2186.jpg)
