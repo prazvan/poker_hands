@@ -4,6 +4,7 @@
 * PHP 7.4.9
 * redis-cli 3.2.6 optional
 * MariaDB Server version: 10.1.41
+* https://laravel.com/docs/7.x#server-requirements
 
 ## Installation Steps 
 
