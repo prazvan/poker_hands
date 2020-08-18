@@ -35,24 +35,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
-        $this->determinateRequestProtocol();
+        // determinate if we use https or http
+        URL::forceScheme(env('CONNECTION_PROTOCOL', static::$scheme));
     }
-
-    /**
-     * used to terminate if we run on http&https.
-     * we use this just to make sure that everything loads on ether http or https :)
-     *
-     */
-    private function determinateRequestProtocol(): void
-    {
-        if (request()->getPort() !== (int) env('UNSECURED_PORT'))
-        {
-            self::$scheme .= 's';
-        }
-
-        URL::forceScheme(self::$scheme);
-    }
-
 }
-
