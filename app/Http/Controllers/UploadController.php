@@ -99,7 +99,6 @@ class UploadController extends Controller
         }
         catch (Exception $exception)
         {
-            dd($exception);
             // best practice is to create an Error Bag for the exception(s)
             // for now this will do.
             // also error handaling should be done on a lower level :)

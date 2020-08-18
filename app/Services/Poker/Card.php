@@ -90,6 +90,6 @@ final class Card
      */
     public function __toString(): string
     {
-        return $this->getCardRank()."".$this->getCardSuit();
+        return $this->getCardRank().$this->getCardSuit();
     }
 }
