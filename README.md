@@ -1,3 +1,10 @@
+## Requirements
+
+* Apache and/or Nginx
+* PHP 7.4.9
+* redis-cli 3.2.6 optional
+* MariaDB Server version: 10.1.41
+
 ## Installation Steps 
 
 *  `mkdir dirname && cd dirname && git clone git@github.com:prazvan/poker_hands.git .`
@@ -11,9 +18,9 @@
 *  php artisan view:clear
 * `above commands are just to make sure we clear all the caches`
 *  php artisan storage:link
-*. php artisan key:generate
-*. php artisan migrate `to create the database tables`
-*. php optimize
+*  php artisan key:generate
+*  php artisan migrate `to create the database tables`
+* php optimize
 
 ### Setup for Reverse Proxy with Nginx and Apache
 
