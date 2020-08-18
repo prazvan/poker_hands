@@ -25,7 +25,7 @@ trait Straights
                 $this->cards[$i-3]
             ];
 
-            // make sure to include the A
+            // make sure to include the ace on low straights
             if ($i > 3)
             {
                 $cards[] = $this->cards[$i-4];
